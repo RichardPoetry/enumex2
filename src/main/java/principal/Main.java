@@ -5,12 +5,14 @@ import entities.Order;
 import entities.OrderItem;
 import entities.Product;
 import enums.OrderStatus;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+
+
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -56,12 +58,12 @@ public class Main {
         System.out.println("Order status:"+order.getStatus());
         System.out.println("Client: "+order.getCliente());
         System.out.println("Order items:");
-        for(int i = 0; i < a; i++ ){
-            System.out.println(order.getItens(i)+", Subtotal: $");
+
+        List<OrderItem> orderItemsList = order.getItens();
+        for (int i = 0; i < orderItemsList.toArray().length; i++) {
+            System.out.println(orderItemsList.get(i).toString());
         }
-        System.out.println("Total price: $"+order.total());
-
-
+        System.out.println("Total Price: $"+order.total());
 
 
     }

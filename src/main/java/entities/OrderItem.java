@@ -1,6 +1,7 @@
 package entities;
 
 public class OrderItem {
+
     private Product product = new Product();
     private Double price;
     private Integer quantity;
@@ -45,6 +46,6 @@ public class OrderItem {
 
     @Override
     public String toString() {
-        return product+", $"+price+", Quantity:"+quantity;
+        return product+", $"+price+", Quantity:"+quantity+" SubTotal: $"+subTotal();
     }
 }

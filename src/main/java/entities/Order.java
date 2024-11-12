@@ -12,6 +12,7 @@ public class Order {
     private Client cliente;
 
     private List<OrderItem> itens = new ArrayList<>();
+
     public Order() {
     }
 
@@ -44,7 +45,7 @@ public class Order {
         this.cliente = cliente;
     }
 
-    public List<OrderItem> getItens(int i) {
+    public List<OrderItem> getItens() {
         return itens;
     }
 
@@ -63,5 +64,13 @@ public class Order {
         return sum;
     }
 
+    @Override
+    public String toString() {
+        return "Order{" +
+                "cliente=" + cliente +
+                ", moment=" + moment +
+                ", status=" + status +
+                '}';
+    }
 }
 
