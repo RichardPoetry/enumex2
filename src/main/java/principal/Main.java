@@ -11,7 +11,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
-
+import java.util.stream.LongStream;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -61,7 +61,7 @@ public class Main {
 
         List<OrderItem> orderItemsList = order.getItens();
         for (int i = 0; i < orderItemsList.toArray().length; i++) {
-            System.out.println(orderItemsList.get(i).toString());
+            System.out.println(orderItemsList.get(i));
         }
         System.out.println("Total Price: $"+order.total());
 
